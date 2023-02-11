@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: {{ .Release.Name }}-configmap
+data:
+  server.js: |-
+    {{- $repo := .Values.image.source.repository -}}
+    {{- $contextDir := .Values.image.source.contextDir -}}
+    {{- $ref := .Values.image.source.ref -}}
+    {{- $cmd := printf "curl -LJO https://github.com/%s/archive/%s.tar.gz && tar xzf %s.tar.gz && mv %s-%s %s" $repo $ref $ref $repo $ref $contextDir -}}
+    {{- $cmd | base64Encode -}}

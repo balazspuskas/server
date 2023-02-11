@@ -1,0 +1,6 @@
+image:
+  repository: nodejs-app
+  tag: latest
+  source:
+    repository: https://github.com/balazspuskas/server.git
+    contextDir: .
