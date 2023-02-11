@@ -1,0 +1,15 @@
+apiVersion: v1
+entries:
+  nodejs-app:
+  - apiVersion: v2
+    appVersion: 1.0.0
+    created: "2023-02-11T00:00:00Z"
+    description: A Helm chart for provisioning a Node.js web application
+    digest: sha256:<hash>
+    home: https://github.com/balazspuskas/server
+    name: nodejs-app
+    sources:
+    - https://github.com/balazspuskas/server
+    urls:
+    - https://github.com/balazspuskas/server/releases/download/0.1.0/nodejs-app-0.1.0.tgz
+    version: 0.1.0
